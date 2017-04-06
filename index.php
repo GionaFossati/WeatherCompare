@@ -11,19 +11,23 @@
   </head>
 
   <body><center>
-
     <h1>Weather Compare</h1><br>
+    <header>
 
-    <div class="City">
 
-        <h2 class="insert"> Insert city </h2>
+    <div class="city">
+
+        <div class="insert"> Insert city </div><br>
         <form class="box" action="index.php" method="post">
         <input type="text" name="city" placeholder="Città"> <br><br>
 
         <input type="submit" name="Infometeo"><br>
 
     </div>
+  </header>
+  <main>
 
+    <div class="openweathermap">
 
       openweathermap <br><br>
 
@@ -45,6 +49,9 @@
 
     ?><br><br>
 
+  </div>
+  <div class="weatherunderground">
+
         Weather Underground <br><br>
 
     <?php
@@ -60,6 +67,9 @@
         echo $data1 ['current_observation']['display_location']['longitude']."<br><br>";}
 
       ?>
+
+    </div>
+    <div class="apixu">
 
       Apixu <br><br>
       <?php
@@ -78,6 +88,13 @@
 
           }
        ?>
+     </div>
+
+     </main>
+
+     <footer>
+
+     </footer>
 
   </body>
 
