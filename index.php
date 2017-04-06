@@ -10,22 +10,29 @@
 
   </head>
 
-  <body><center>
-    
-    <h1>Weather Compare</h1><br>
-
+  <body>
     <header>
+
+    <div class="title">Weather Compare</div><hr>
+    <h2>Compare the weather forecast between different weather clients</h2>
+
+  </header>
+
+    <main>
 
 
     <div class="city">
 
-        <div class="insert"> Insert city </div><br>
         <form class="box" action="results.php" method="post">
-        <input type="text" name="city" placeholder="Città"> <br><br>
+            <input type="text" name="city" placeholder="City"> <br><br>
+        </form>
+    </div><br><br>
 
+    <div class="sub">
+      Type in the city you want to compare then hit ENTER.
     </div>
 
-  </header>
+  </main>
 
   </body>
 
