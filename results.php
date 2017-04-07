@@ -4,34 +4,43 @@
     <title>Risultati Meteo per <!--CITY--></title>
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/results.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   </head>
   <body>
 
+    <header>
 
-  <div class="openweathermap">
-      openweathermap <br><br>
-      <?php include 'php/openweathermap.php'; ?>
+        <div class="title">Weather Compare</div>
 
-      <br><br>
+    </header>
 
-  </div>
+    <main>
 
-  <div class="weatherunderground">
+      <div class="openweathermap">
+          openweathermap <br><br>
+          <?php include 'php/openweathermap.php'; ?>
 
-      Weather Underground <br><br>
-      <?php   include 'php/weatherunderground.php';  ?>
+          <br><br>
 
-  </div>
+      </div>
 
-  <div class="apixu">
+      <div class="weatherunderground">
 
-    Apixu <br><br>
-    <?php  include 'php/apixu.php';   ?>
+          Weather Underground <br><br>
+          <?php   include 'php/weatherunderground.php';  ?>
 
-   </div>
+      </div>
 
+      <div class="apixu">
+
+        Apixu <br><br>
+        <?php  include 'php/apixu.php';   ?>
+
+       </div>
+
+
+ </main>
 
  </body>
   </html>

@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #6380D0;
+  background-color: #7ec0ee;
   color: white;
   text-align: center;
 
@@ -31,9 +31,8 @@ main {
 
 }
 
-hr {width: 41%; box-shadow: 3px 3px 3px black;}
-
-h2 {font-weight: lighter;}
+hr {    width: 41%; box-shadow: 3px 3px 3px  #3293d0; }
+h2 {    font-weight: lighter; }
 
 input {
   height: 48px;
@@ -42,17 +41,17 @@ input {
   font-size: 25px;
   text-align: center;
   line-height: 25px;
-  border: solid 0px;
+  border:  0px #7ec0ee;
   border-radius: 15px;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 3px #3293d0;
   transition: width 0.4s ease-in-out;
-  color: #6380D0;
+  color: #7ec0ee;
 }
 
 input:focus { width: 40%; }
 
 input:hover {
-          box-shadow: 3px 3px 3px 3px rgb(51, 70, 198);
+          box-shadow: 3px 3px 3px 3px #87CEFA;
           transition: 0.35s;
 }
 
