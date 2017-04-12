@@ -19,8 +19,11 @@
     echo $meteo_data1 ['current_observation']['display_location']['latitude']."<br>";
     echo $meteo_data1 ['current_observation']['display_location']['longitude']."<br><br>";
 
-    echo "Il Giorno "; echo $previsioni_data1 ['forecast']['txt_forecast']['forecastday']['0']['date']['pretty'];
-    echo "La temperatura max sarà:"; echo $previsioni_data1 ['forecast']['txt_forecast']['simpleforecast']['high']['celsius'];
+    echo "Il Giorno "; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['date']['day'];
+    echo "/"; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['date']['month'];
+    echo " La temperatura max sarà: "; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['high']['celsius']."°";
+    echo "; e la temperatura minima sarà: "; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['low']['celsius']."°";
 
-    }
+}
+
 ?>

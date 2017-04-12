@@ -12,7 +12,9 @@
     <header>
 
         <div class="title">Weather Compare</div>
-
+        <form class="city" action="results.php" method="post">
+            <input type="text" name="city" placeholder="<!--CITY-->"> <br><br>
+        </form>
     </header>
 
     <main>
@@ -39,15 +41,14 @@
 
        </div>
 
+       <?php
+       $pageContents = ob_get_contents ();
+       ob_end_clean ();
+
+       echo str_replace ('<!--CITY-->', $city, $pageContents);
+       ?>
 
  </main>
 
  </body>
   </html>
-
-  <?php
-  $pageContents = ob_get_contents ();
-  ob_end_clean ();
-
-  echo str_replace ('<!--CITY-->', $city, $pageContents);
-   ?>
