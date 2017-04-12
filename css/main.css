@@ -46,6 +46,7 @@ input {
   box-shadow: 3px 3px 3px #3293d0;
   transition: width 0.4s ease-in-out;
   color: #7ec0ee;
+  outline: none;
 }
 
 input:focus { width: 40%; }

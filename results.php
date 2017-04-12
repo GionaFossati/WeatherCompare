@@ -13,7 +13,7 @@
 
         <div class="title">Weather Compare</div>
         <form class="city" action="results.php" method="post">
-            <input type="text" name="city" placeholder="<!--CITY-->"> <br><br>
+            <input type="text" name="city" value="<!--CITY-->" onfocus="this.select()"> <br><br>
         </form>
     </header>
 
@@ -32,7 +32,7 @@
           Weather Underground <br><br>
           <?php   include 'php/weatherunderground.php';  ?>
 
-      </div>
+      </div><br><br>
 
       <div class="apixu">
 
