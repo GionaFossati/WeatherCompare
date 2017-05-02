@@ -33,3 +33,10 @@ input:hover {
           box-shadow: 3px 3px 3px 3px #87CEFA;
           transition: 0.35s;
 }
+
+.openweathermap_logo {
+  height: 150px;
+  width: 150px;
+  background-image: url("../images/openweathermap_logo.png");
+  display: flex;
+}

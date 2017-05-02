@@ -14,12 +14,16 @@
     $previsioni_data0=json_decode($previsioni_json0,true);
 
 
-    echo $meteo_data0['main']['temp']."°C <br>";
-    echo $meteo_data0['weather'][0]['main']."<br>";
-    echo $meteo_data0['clouds']['all']."<br>";
-    echo $meteo_data0['wind']['speed']."<br>";
-    echo $meteo_data0['coord']['lon']."<br>";
-    echo $meteo_data0['coord']['lat'];
-  }
+    $m0 = explode(".", $meteo_data0['main']['temp']);
+    echo $m0[0] . "°";
+
+    echo " la temperatura max sarà: ";
+    $p0 = explode(".", $previsioni_data0['list']['0']['temp']['max']);
+    echo $p0[0];
+    echo " e la minima: ";
+    $p00 = explode(".", $previsioni_data0['list']['0']['temp']['min']);
+    echo $p00[0];
+
+    }
 
 ?>

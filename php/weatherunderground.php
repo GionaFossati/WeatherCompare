@@ -15,14 +15,16 @@
     //print_r ($previsioni_data1);
 
 
-    echo $meteo_data1 ['current_observation']['temperature_string']."<br>";
-    echo $meteo_data1 ['current_observation']['display_location']['latitude']."<br>";
-    echo $meteo_data1 ['current_observation']['display_location']['longitude']."<br><br>";
+    $m1 = explode(".", $meteo_data1 ['current_observation']['temp_c']);
+    echo $m1[0]."°<br>";
 
     echo "Il Giorno "; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['date']['day'];
-    echo "/"; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['date']['month'];
-    echo " La temperatura max sarà: "; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['high']['celsius']."°";
-    echo "; e la temperatura minima sarà: "; echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['low']['celsius']."°";
+    echo "/";
+    echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['date']['month'];
+    echo " La temperatura max sarà: ";
+    echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['high']['celsius']."°";
+    echo "; e la temperatura minima sarà: ";
+    echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['0']['low']['celsius']."°";
 
 }
 

@@ -20,7 +20,7 @@
     <main>
 
       <div class="openweathermap">
-          openweathermap <br><br>
+          <div class="openweathermap_logo"></div>
           <?php include 'php/openweathermap.php'; ?>
 
           <br><br>

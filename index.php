@@ -7,14 +7,14 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    
+
   </head>
 
   <body>
     <header>
 
     <div class="title">Weather Compare</div><hr>
-    <h2>Compare the weather forecast between different weather clients</h2>
+    <h2>Compare the weather forecast between different weather providers</h2>
 
   </header>
 
