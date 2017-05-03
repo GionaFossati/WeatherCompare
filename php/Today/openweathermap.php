@@ -14,15 +14,10 @@
     $previsioni_data0=json_decode($previsioni_json0,true);
 
 
-    $m0 = explode(".", $meteo_data0['main']['temp']);
-    echo $m0[0] . "°";
-
-    echo " la temperatura max sarà: ";
     $p0 = explode(".", $previsioni_data0['list']['0']['temp']['max']);
-    echo $p0[0];
-    echo " e la minima: ";
+    echo $p0[0]."° <br>";
     $p00 = explode(".", $previsioni_data0['list']['0']['temp']['min']);
-    echo $p00[0];
+    echo $p00[0]."°";
 
     }
 

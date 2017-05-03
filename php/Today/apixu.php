@@ -16,16 +16,11 @@
       $previsioni_data2=json_decode($previsioni_json2,true);
       //print_r ($previsioni_data2);
 
-      echo $meteo_data2 ['current']['temp_c']."°C<br>";
 
-      echo "Il giorno ";
-      echo $previsioni_data2 ['forecast']['forecastday']['0']['date'];
-      echo " la temperatura max sarà: ";
       $p2 = explode(".", $previsioni_data2 ['forecast']['forecastday']['0']['day']['maxtemp_c']);
-      echo $p2[0];
-      echo " e la minima: ";
+      echo $p2[0]."° <br>";
       $p22 = explode(".", $previsioni_data2 ['forecast']['forecastday']['0']['day']['mintemp_c']);
-      echo $p22[0];
+      echo $p22[0]."°";
 
   }
 

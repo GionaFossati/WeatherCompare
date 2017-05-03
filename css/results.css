@@ -34,9 +34,34 @@ input:hover {
           transition: 0.35s;
 }
 
-.openweathermap_logo {
+/*.openweathermap_logo {
   height: 150px;
   width: 150px;
   background-image: url("../images/openweathermap_logo.png");
+
+}*/
+
+.row {
+  color: black;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 3px 3px 3px #3293d0;
   display: flex;
+  font-size: 25px;
+}
+
+.day {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 25%;
+  text-align: left;
+
+}
+
+.today {
+  width: 25%;
+
 }

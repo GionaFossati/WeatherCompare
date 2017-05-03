@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/results.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   </head>
+
   <body>
 
     <header>
@@ -19,27 +20,57 @@
 
     <main>
 
-      <div class="openweathermap">
-          <div class="openweathermap_logo"></div>
-          <?php include 'php/openweathermap.php'; ?>
+      <div class="forecast">
 
-          <br><br>
+            <div class="row">
+
+                  <div class="day">
+                      Today <br>
+                      <div align="center"> <?php echo date("d/m"); ?> </div>
+                  </div>
+
+                  <div class="today">
+                    <?php include 'php/Today/openweathermap.php'; ?>
+                  </div>
+
+                  <div class="today">
+                     <?php include 'php/Today/weatherunderground.php';  ?>
+                  </div>
+
+                  <div class="today">
+                    <?php include 'php/Today/apixu.php';   ?>
+                  </div>
+
+            </div>
+
+
+            <div class="row">
+
+                  <div class="day">
+                      Tomorrow <br>
+                      <div align="center"> <?php echo date("d/m", strtotime("+1 days")); ?> </div>
+                  </div>
+
+            </div>
+
+
+
+            <div class="row">
+
+                    <div class="day">
+                        After tomorrow <br>
+                        <div align="center"> <?php echo date("d/m", strtotime("+2 days")); ?> </div>
+                    </div>
+
+            </div>
 
       </div>
 
-      <div class="weatherunderground">
+            openweathermap <br><br>
+                Weather Underground <br><br>
+              Apixu <br><br>
 
-          Weather Underground <br><br>
-          <?php   include 'php/weatherunderground.php';  ?>
 
-      </div><br><br>
-
-      <div class="apixu">
-
-        Apixu <br><br>
-        <?php  include 'php/apixu.php';   ?>
-
-       </div>
 
        <?php
        $pageContents = ob_get_contents ();
