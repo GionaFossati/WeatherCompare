@@ -51,6 +51,18 @@
                       <div align="center"> <?php echo date("d/m", strtotime("+1 days")); ?> </div>
                   </div>
 
+                      <div class="today">
+                      <?php include 'php/Tomorrow/openweathermap.php'; ?>
+                      </div>
+
+                      <div class="today">
+                     <?php include 'php/Tomorrow/weatherunderground.php';  ?>
+                      </div>
+
+                     <div class="today">
+                     <?php include 'php/Tomorrow/apixu.php';   ?>
+                    </div>
+
             </div>
 
 
@@ -61,6 +73,20 @@
                         After tomorrow <br>
                         <div align="center"> <?php echo date("d/m", strtotime("+2 days")); ?> </div>
                     </div>
+
+
+                      <div class="today">
+                      <?php include 'php/Thedayafter/openweathermap.php'; ?>
+                      </div>
+
+                      <div class="today">
+                      <?php include 'php/Thedayafter/weatherunderground.php';  ?>
+                      </div>
+
+                     <div class="today">
+                      <?php include 'php/Thedayafter/apixu.php';   ?>
+                      </div>
+
 
             </div>
 

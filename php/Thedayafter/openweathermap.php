@@ -13,9 +13,9 @@
     $previsioni_json0=file_get_contents($previsioni0);
     $previsioni_data0=json_decode($previsioni_json0,true);
 
-    $p0 = explode(".", $previsioni_data0['list']['0']['temp']['max']);
+    $p0 = explode(".", $previsioni_data0['list']['2']['temp']['max']);
     echo $p0[0]."° <br>";
-    $p00 = explode(".", $previsioni_data0['list']['0']['temp']['min']);
+    $p00 = explode(".", $previsioni_data0['list']['2']['temp']['min']);
     echo $p00[0]."°";
 
     }
