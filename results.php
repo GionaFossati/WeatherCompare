@@ -18,7 +18,15 @@
         </form>
     </header>
 
+    <div class="logos">
+
+      <a class="provider openweathermap-logo"></a>
+      <a class="provider weatherunderground-logo"></a>
+      <a class="provider apixu-logo"></a>
+    </div>
+
     <main>
+
 
       <div class="forecast">
 
@@ -26,18 +34,18 @@
 
                   <div class="day">
                       Today <br>
-                      <div align="center"> <?php echo date("d/m"); ?> </div>
+                      <div align="center" style="font-size: 20px;"> <?php echo date("d/m"); ?> </div>
                   </div>
 
-                  <div class="today">
+                  <div class="temp">
                     <?php include 'php/Today/openweathermap.php'; ?>
                   </div>
 
-                  <div class="today">
+                  <div class="temp">
                      <?php include 'php/Today/weatherunderground.php';  ?>
                   </div>
 
-                  <div class="today">
+                  <div class="temp">
                     <?php include 'php/Today/apixu.php';   ?>
                   </div>
 
@@ -48,18 +56,18 @@
 
                   <div class="day">
                       Tomorrow <br>
-                      <div align="center"> <?php echo date("d/m", strtotime("+1 days")); ?> </div>
+                      <div align="center" style="font-size: 20px;"> <?php echo date("d/m", strtotime("+1 days")); ?> </div>
                   </div>
 
-                      <div class="today">
+                      <div class="temp">
                       <?php include 'php/Tomorrow/openweathermap.php'; ?>
                       </div>
 
-                      <div class="today">
+                      <div class="temp">
                      <?php include 'php/Tomorrow/weatherunderground.php';  ?>
                       </div>
 
-                     <div class="today">
+                     <div class="temp">
                      <?php include 'php/Tomorrow/apixu.php';   ?>
                     </div>
 
@@ -71,19 +79,19 @@
 
                     <div class="day">
                         After tomorrow <br>
-                        <div align="center"> <?php echo date("d/m", strtotime("+2 days")); ?> </div>
+                        <div align="center" style="font-size: 20px;"> <?php echo date("d/m", strtotime("+2 days")); ?> </div>
                     </div>
 
 
-                      <div class="today">
+                      <div class="temp">
                       <?php include 'php/Thedayafter/openweathermap.php'; ?>
                       </div>
 
-                      <div class="today">
+                      <div class="temp">
                       <?php include 'php/Thedayafter/weatherunderground.php';  ?>
                       </div>
 
-                     <div class="today">
+                     <div class="temp">
                       <?php include 'php/Thedayafter/apixu.php';   ?>
                       </div>
 
@@ -91,10 +99,13 @@
             </div>
 
       </div>
+      <div class="column">
 
-            openweathermap <br><br>
-                Weather Underground <br><br>
-              Apixu <br><br>
+        <div class="row"> </div>
+        <div class="row"> </div>
+        <div class="row"> </div>
+
+      </div>
 
 
 
@@ -106,6 +117,11 @@
        ?>
 
  </main>
+
+
+             openweathermap <br><br>
+                 Weather Underground <br><br>
+               Apixu <br><br>
 
  </body>
   </html>

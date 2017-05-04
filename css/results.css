@@ -9,6 +9,8 @@ html, body {
   text-align: center;
 }
 
+main  {   display: flex;   }
+
 .title {
   font-size: 50px;
   padding-top: 10px;
@@ -33,18 +35,29 @@ input:hover {
           transition: 0.35s;
 }
 
-/*.openweathermap_logo {
+.logos {
+  margin-left: 20%;
+  margin-bottom: -50px;
+  margin-right: 22%;
+  margin-top: 5px;
+  display: flex;
+}
+
+.openweathermap_logo {
   height: 150px;
   width: 150px;
   background-image: url("../images/openweathermap_logo.png");
 
-}*/
+}
 
-.forecast {   margin-top: 30px;   }
+.forecast {
+  width: 80%;
+  margin-top: 30px;
+  margin-right: 20px;
+   }
 
 .row {
   color: black;
-  width: 80%;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: rgba(255, 255, 255, 0.72);
@@ -54,6 +67,7 @@ input:hover {
   box-shadow: 3px 3px 3px #3293d0;
   display: flex;
   font-size: 25px;
+  height: 70px;
 }
 
 .day {
@@ -63,7 +77,24 @@ input:hover {
 
 }
 
-.today {
+.temp {
   width: 25%;
+  padding-top: 5px;
+
+}
+
+.column {
+  margin-top: 30px;
+  color: black;
+  width: 20%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 3px 3px 3px #3293d0;
+  display: flex;
+  font-size: 25px;
 
 }
