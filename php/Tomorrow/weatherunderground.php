@@ -11,9 +11,10 @@
     //print_r ($previsioni_data1);
 
 
-    echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['1']['high']['celsius']."°"."<br>";
-    echo $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['1']['low']['celsius']."°";
-
+    $p1_1 = $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['1']['high']['celsius']."°"."<br>";
+    echo $p1_1;
+    $p11_1 = $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['1']['low']['celsius']."°";
+    echo $p11_1;
 }
 
 ?>

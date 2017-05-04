@@ -20,9 +20,9 @@
 
           <div class="logos">
 
-            <a class="provider openweathermap-logo">openweathermap</a>
-            <a class="provider weatherunderground-logo">weatherunderground</a>
-            <a class="provider apixu-logo">apixu</a>
+            <a class="provider openweathermap-logo" href="http://openweathermap.org/find?q=<!--CITY-->">OpenWeatherMap</a>
+            <a class="provider weatherunderground-logo" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->">WeatherUnderground</a>
+            <a class="provider apixu-logo" href="https://www.apixu.com/">Apixu</a>
             <div class="provider">Media Ponderata</div>
 
           </div>
@@ -42,9 +42,15 @@
                     <?php include 'php/Today/openweathermap.php'; ?>
                   </div>
 
+                  <div class="line_row"> </div>
+
+
                   <div class="temp">
                      <?php include 'php/Today/weatherunderground.php';  ?>
                   </div>
+
+                  <div class="line_row"> </div>
+
 
                   <div class="temp">
                     <?php include 'php/Today/apixu.php';   ?>
@@ -64,9 +70,15 @@
                       <?php include 'php/Tomorrow/openweathermap.php'; ?>
                       </div>
 
+                      <div class="line_row"> </div>
+
+
                       <div class="temp">
                      <?php include 'php/Tomorrow/weatherunderground.php';  ?>
                       </div>
+
+                      <div class="line_row"> </div>
+
 
                      <div class="temp">
                      <?php include 'php/Tomorrow/apixu.php';   ?>
@@ -88,9 +100,15 @@
                       <?php include 'php/Thedayafter/openweathermap.php'; ?>
                       </div>
 
+                      <div class="line_row"> </div>
+
+
                       <div class="temp">
                       <?php include 'php/Thedayafter/weatherunderground.php';  ?>
                       </div>
+
+                      <div class="line_row"> </div>
+
 
                      <div class="temp">
                       <?php include 'php/Thedayafter/apixu.php';   ?>
@@ -100,14 +118,50 @@
             </div>
 
       </div>
+
+      <?php function media($x,$y,$z) {
+        $m = ( $x + $y + $z ) /3;
+        return $m;
+          }
+      ?>
+
       <div class="column">
 
-        <div class="row"></div>
-        <div class="row"> </div>
-        <div class="row"> </div>
+            <div class="temp media">
+
+                <?php $media_today_max = explode(".", media($p0_0[0],$p1_0,$p2_0[0]));
+                echo $media_today_max[0]."° <br>";
+
+                $media_today_min = explode(".", media($p00_0[0],$p11_0,$p22_0[0]));
+                echo $media_today_min[0]."°";
+
+                ?>
+            </div>
+
+            <div class="line_column"> </div>
+
+            <div class="temp media">
+
+                  <?php  $media_tomorrow_max = explode(".", media($p0_1[0],$p1_1,$p2_1[0]));
+                      echo $media_tomorrow_max[0]."° <br>";
+
+                      $media_tomorrow_min = explode(".", media($p00_1[0],$p11_1,$p22_1[0]));
+                      echo $media_tomorrow_min[0]."°";
+                  ?>
+            </div>
+
+            <div class="line_column"> </div>
+
+            <div class="temp media">
+                  <?php  $media_dayafter_max = explode(".", media($p0_2[0],$p1_2,$p2_2[0]));
+                        echo $media_dayafter_max[0]."° <br>";
+
+                        $media_dayafter_min = explode(".", media($p00_2[0],$p11_2,$p22_2[0]));
+                        echo $media_dayafter_min[0]."°";
+                  ?>
+            </div>
 
       </div>
-
 
 
        <?php
@@ -119,10 +173,9 @@
 
  </main>
 
-
-             openweathermap <br><br>
-                 Weather Underground <br><br>
-               Apixu <br><br>
+ <footer>
+   An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/">Giona Fossati</a> | Project's Repository: <a href="https://github.com/GionaFossati/WeatherCompare">Link</a>
+ </footer>
 
  </body>
   </html>

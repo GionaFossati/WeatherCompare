@@ -11,10 +11,10 @@
       //print_r ($previsioni_data2);
 
 
-      $p2 = explode(".", $previsioni_data2 ['forecast']['forecastday']['0']['day']['maxtemp_c']);
-      echo $p2[0]."° <br>";
-      $p22 = explode(".", $previsioni_data2 ['forecast']['forecastday']['0']['day']['mintemp_c']);
-      echo $p22[0]."°";
+      $p2_0 = explode(".", $previsioni_data2 ['forecast']['forecastday']['0']['day']['maxtemp_c']);
+      echo $p2_0[0]."° <br>";
+      $p22_0 = explode(".", $previsioni_data2 ['forecast']['forecastday']['0']['day']['mintemp_c']);
+      echo $p22_0[0]."°";
 
   }
 
