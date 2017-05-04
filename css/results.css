@@ -37,22 +37,27 @@ input:hover {
 
 .logos {
   margin-left: 20%;
-  margin-bottom: -50px;
-  margin-right: 22%;
   margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
   display: flex;
 }
 
-.openweathermap_logo {
+.provider { width: 33.333%; }
+
+.media {
+  margin-left: 80%;
+}
+
+/*.openweathermap_logo {
   height: 150px;
   width: 150px;
   background-image: url("../images/openweathermap_logo.png");
 
-}
+}*/
 
 .forecast {
   width: 80%;
-  margin-top: 30px;
   margin-right: 20px;
    }
 
@@ -84,7 +89,6 @@ input:hover {
 }
 
 .column {
-  margin-top: 30px;
   color: black;
   width: 20%;
   padding-top: 5px;

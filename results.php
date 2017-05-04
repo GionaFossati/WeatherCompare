@@ -18,12 +18,14 @@
         </form>
     </header>
 
-    <div class="logos">
+          <div class="logos">
 
-      <a class="provider openweathermap-logo"></a>
-      <a class="provider weatherunderground-logo"></a>
-      <a class="provider apixu-logo"></a>
-    </div>
+            <a class="provider openweathermap-logo">openweathermap</a>
+            <a class="provider weatherunderground-logo">weatherunderground</a>
+            <a class="provider apixu-logo">apixu</a>
+            <div class="provider">Media Ponderata</div>
+
+          </div>
 
     <main>
 
@@ -31,7 +33,6 @@
       <div class="forecast">
 
             <div class="row">
-
                   <div class="day">
                       Today <br>
                       <div align="center" style="font-size: 20px;"> <?php echo date("d/m"); ?> </div>
@@ -101,7 +102,7 @@
       </div>
       <div class="column">
 
-        <div class="row"> </div>
+        <div class="row"></div>
         <div class="row"> </div>
         <div class="row"> </div>
 
