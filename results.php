@@ -20,9 +20,9 @@
 
           <div class="logos">
 
-            <a class="provider openweathermap-logo" href="http://openweathermap.org/find?q=<!--CITY-->">OpenWeatherMap</a>
-            <a class="provider weatherunderground-logo" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->">WeatherUnderground</a>
-            <a class="provider apixu-logo" href="https://www.apixu.com/">Apixu</a>
+            <a class="provider openweathermap-logo" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
+            <a class="provider weatherunderground-logo" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
+            <a class="provider apixu-logo" href="https://www.apixu.com/" target="_blank">Apixu</a>
             <div class="provider">Media Ponderata</div>
 
           </div>
@@ -174,7 +174,7 @@
  </main>
 
  <footer>
-   An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/">Giona Fossati</a> | Project's Repository: <a href="https://github.com/GionaFossati/WeatherCompare">Link</a>
+   An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | Project's Repository on GitHub: <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Link</a>
  </footer>
 
  </body>
