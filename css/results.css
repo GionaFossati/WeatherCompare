@@ -136,3 +136,10 @@ input:hover {
   height: 2px;
   background-color: rgb(162, 207, 238);
 }
+
+.login {
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+
+footer {  margin-bottom: 20px;  }

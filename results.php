@@ -172,6 +172,11 @@
        ?>
 
  </main>
+<div class="login">
+  <h2>Want some premium features? <a href="login/newuser/newuser.html">Register now</a></h2><br>
+  <h3>Already have an account? <a href="login/login.html">Login</a></h3>
+
+</div>
 
  <footer>
    An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | Project's Repository on GitHub: <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Link</a>
