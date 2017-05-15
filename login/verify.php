@@ -22,9 +22,9 @@ if (isset($username) && isset($password))
     if (mysqli_num_rows($query)) {
       $row = mysqli_fetch_assoc($query);
       $_SESSION["logged"] =true;
-      header("location:../results.php");
+      header("location:../index-premium.php");
     } else {
-      header("location:newuser/newuser.html");
+      header("location:newusear/newuser.html");
     }}
 
 ?>

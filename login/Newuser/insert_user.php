@@ -36,6 +36,7 @@ echo 'Password: '.$password.'<br>';
 
 mysqli_close($conn);
 ?>
-
+<a href="../login.html">Vai al Login!</a>
 </body>
+
 </html>
