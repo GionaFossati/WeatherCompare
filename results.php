@@ -20,9 +20,9 @@
 
           <div class="logos">
 
-            <a class="provider openweathermap-logo" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
-            <a class="provider weatherunderground-logo" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
-            <a class="provider apixu-logo" href="https://www.apixu.com/" target="_blank">Apixu</a>
+            <a class="provider" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
+            <a class="provider" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
+            <a class="provider" href="https://www.apixu.com/" target="_blank">Apixu</a>
             <div class="provider">Media Ponderata</div>
 
           </div>

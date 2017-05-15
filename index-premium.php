@@ -5,7 +5,7 @@
     <title>Progetto Informatica</title>
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-premium.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
   </head>
@@ -23,7 +23,7 @@
 
     <div class="city">
 
-        <form class="box" action="personalpage.php" method="post">
+        <form class="box" action="results-premium.php" method="post">
             <input type="text" name="city" placeholder="City"> <br><br>
         </form>
     </div><br><br>

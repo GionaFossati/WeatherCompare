@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #7ec0ee;
+  background-color: #ffca3d;
   color: white;
   text-align: center;
 
@@ -14,37 +14,13 @@ main {
     width: 100%;
     height: 50vh;
     padding: 25px 0px 25px 0px;
-
-}
-
-a {color: white; }
-
-
-.navbar {
+    /*background-image: url('../images/sfondo-header.jpg');
+    background-position: top;
+    background-size: cover;
     display: flex;
-    justify-content: flex-end;
-    height: 50px;
-    width: 100%;
+    justify-content: center;
+    align-items: center;*/
 }
-.login {
-  width: 100px;
-  background-color: white;
-  text-decoration: blink;
-  justify-content: center;
-  padding-top: 7px;
-  border-radius: 10px;
-  margin: 5px;
-  margin-right: 25px;
-  color: #7ec0ee;
-  font-size: 20px
-}
-
-.login:hover {
-  transition: 0.4s ease-out;
-  box-shadow: 2px 2px 2px 2px #3da1df;
-  transition: 0.35s;
-}
-
 
 .title {
   font-size: 70px;
@@ -55,7 +31,7 @@ a {color: white; }
 
 }
 
-hr {    width: 41%; box-shadow: 3px 3px 3px  #3293d0; }
+hr {    width: 41%; box-shadow: 3px 3px 3px  #dad5c6; }
 h2 {    font-weight: lighter; }
 
 input {
@@ -65,18 +41,18 @@ input {
   font-size: 25px;
   text-align: center;
   line-height: 25px;
-  border:  0px #7ec0ee;
+  border:  0px #ffca3d;
   border-radius: 15px;
-  box-shadow: 3px 3px 3px #3293d0;
+  box-shadow: 3px 3px 3px #a28024;
   transition: width 0.4s ease-in-out;
-  color: #7ec0ee;
+  color: #ffca3d;
   outline: none;
 }
 
 input:focus { width: 40%; }
 
 input:hover {
-          box-shadow: 3px 3px 3px 3px #87CEFA;
+          box-shadow: 3px 3px 3px 3px #a28024;
           transition: 0.35s;
 }
 

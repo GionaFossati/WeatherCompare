@@ -4,8 +4,7 @@
     <title>Risultati Meteo per <!--CITY--></title>
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/results.css">
-    <link rel="stylesheet" href="css/personalpage.css">
+    <link rel="stylesheet" href="css/results-premium.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   </head>
 
@@ -13,17 +12,17 @@
 
     <header>
 
-        <div class="title">Weather Compare</div>
-        <form class="city" action="personalpage.php" method="post">
+        <div class="title">Weather Compare PREMIUM</div>
+        <form class="city" action="results-premium.php" method="post">
             <input type="text" name="city" value="<!--CITY-->" onfocus="this.select()"> <br><br>
         </form>
     </header>
 
           <div class="logos">
 
-            <a class="provider openweathermap-logo" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
-            <a class="provider weatherunderground-logo" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
-            <a class="provider apixu-logo" href="https://www.apixu.com/" target="_blank">Apixu</a>
+            <a class="provider" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
+            <a class="provider" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
+            <a class="provider" href="https://www.apixu.com/" target="_blank">Apixu</a>
             <div class="provider">Media Ponderata</div>
 
           </div>
@@ -165,15 +164,21 @@
       </div>
 
 
-       <?php
-       $pageContents = ob_get_contents ();
-       ob_end_clean ();
-
-       echo str_replace ('<!--CITY-->', $city, $pageContents);
-       ?>
 
  </main>
+   <h2>Current weather:</h2>
+ </div>
+ <div class="logos2 logos">
 
+   <a class="provider" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
+   <a class="provider" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
+   <a class="provider" href="https://www.apixu.com/" target="_blank">Apixu</a> </div>
+ <div class="current">
+
+   <div class="singlecurrent"><?php include 'php/personalpage/openweathermap.php'; ?>     </div>
+   <div class="singlecurrent"><?php include 'php/personalpage/weatherunderground.php'; ?></div>
+   <div class="singlecurrent"><?php include 'php/personalpage/apixu.php'; ?></div>
+</div>
 
  <footer>
    An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | Project's Repository on GitHub: <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Link</a>
