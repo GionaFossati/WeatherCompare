@@ -24,7 +24,7 @@ if (isset($username) && isset($password))
       $_SESSION["logged"] =true;
       header("location:../index-premium.php");
     } else {
-      header("location:newusear/newuser.html");
+      header("location:newuser/newuser.html");
     }}
 
 ?>

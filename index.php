@@ -14,6 +14,7 @@
     <header>
       <div class="navbar">
         <a class="login"href="login/login.html">Login</a>
+        <a class="login"href="login/newuser/newuser.html">Register</a>        
       </div>
     <div class="title">Weather Compare</div><hr>
     <h2>Compare the weather forecast between different weather providers</h2>

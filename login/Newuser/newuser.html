@@ -2,32 +2,28 @@
 
 <head>
 	<title>Registrati</title>
+	<link rel="stylesheet" href="../../css/register.css">
+	<link rel="stylesheet" href="../../css/login.css">
+
 </head>
 
 <body>
+	<div class="title">Weather Compare</div>
+	<h2>Register for premium features</h2>
 
-	<table>
-		<form name="form" method="POST" action="insert_user.php">
+	<hr>
 
 
-			<tr>
-				<td>Inserisci la tua email:</td>
-				<td><input type="text" name="email"></td>
-			</tr>
-
-			<tr>
-				<td>Password</td>
-				<td><input type="text" name="password"></td>
-			</tr>
-
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Registrati"> </td>
-			</tr>
-
-		</form>
-	</table>
-
+	<form id="login" action="firstaccess.php" method="post">
+		<fieldset id="inputs">
+			<input id="username" name="email" type="text" placeholder="Username" autofocus required>
+			<input id="password" name="password" type="password" placeholder="Password" required>
+		</fieldset>
+		<fieldset id="actions">
+			<input type="submit" id="submit" value="Registrati">
+			<a href="../index.php" id="back">Return to WeatherCompare</a>
+		</fieldset>
+	</form>
 
 </body>
 

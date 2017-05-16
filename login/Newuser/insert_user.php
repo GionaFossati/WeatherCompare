@@ -1,12 +1,3 @@
-<html>
-<head>
-<title>Utenti</title>
-</head>
-
-<body>
-
-<h1>Utente Registrato!</h1>
-
 <?php
 $servername = "localhost";
 $username = "root";
@@ -30,13 +21,5 @@ mysqli_query($conn, $sql);
 $sql2 = "SELECT * FROM lista_utenti";
 $result = mysqli_query($conn, $sql2);
 
-echo 'Email: '.$email.'<br>';
-echo 'Password: '.$password.'<br>';
-
-
 mysqli_close($conn);
 ?>
-<a href="../login.html">Vai al Login!</a>
-</body>
-
-</html>

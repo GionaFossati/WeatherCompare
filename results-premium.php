@@ -184,5 +184,13 @@
    An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | Project's Repository on GitHub: <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Link</a>
  </footer>
 
+
  </body>
+ 
+       <?php
+       $pageContents = ob_get_contents ();
+       ob_end_clean ();
+
+       echo str_replace ('<!--CITY-->', $city, $pageContents);
+       ?>
   </html>
