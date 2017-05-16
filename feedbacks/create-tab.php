@@ -1,6 +1,6 @@
 <?php
 
-require '/db-users.php';
+include 'dbconnection.php';
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 

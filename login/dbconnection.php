@@ -2,6 +2,5 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "weathercompare";
-
+$dbname = "utenti";
  ?>
