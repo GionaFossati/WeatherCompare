@@ -29,7 +29,7 @@ main  {   display: flex;   }
   margin-bottom: 0px;
 }
 
-input {
+.input-city {
   margin-top: 20px;
   height: 50px;
   font-size: 30px;
@@ -42,7 +42,7 @@ input {
   color: #ffb900;
 }
 
-input:hover {
+.input-city:hover {
           box-shadow: 3px 3px 3px 3px #a28024;
           transition: 0.35s;
 }

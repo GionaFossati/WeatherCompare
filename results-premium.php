@@ -14,7 +14,7 @@
 
         <div class="title">Weather Compare PREMIUM</div>
         <form class="city" action="results-premium.php" method="post">
-            <input type="text" name="city" value="<!--CITY-->" onfocus="this.select()"> <br><br>
+            <input class="input-city" type="text" name="city" value="<!--CITY-->" onfocus="this.select()"> <br><br>
         </form>
     </header>
 
@@ -119,10 +119,37 @@
 
       </div>
 
-      <?php function media($x,$y,$z) {
-        $m = ( $x + $y + $z ) /3;
-        return $m;
-          }
+      <?php
+          include 'feedbacks/dbconnection.php';
+              $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+              $a0 = 'SELECT avg(weatherunderground) AS average FROM weatherunderground';
+              $res0= $conn->query($a0);
+              $row0 = $res0-> fetch_array(MYSQLI_NUM);
+
+
+              $openweathermap_feed_value = substr($row0[0], 0, -3);
+
+            $a1 = 'SELECT avg(weatherunderground) AS average FROM weatherunderground';
+            $res1= $conn->query($a1);
+            $row1 = $res1-> fetch_array(MYSQLI_NUM);
+
+
+            $weatherunderground_feed_value =  substr($row1[0], 0, -3);
+
+            $a2 = 'SELECT avg(apixu) AS average FROM apixu';
+            $res2= $conn->query($a2);
+            $row2 = $res2-> fetch_array(MYSQLI_NUM);
+
+
+            $apixu_feed_value = substr($row2[0], 0, -3);
+            mysqli_close($conn);
+
+          function media($x,$y,$z) {
+            $m = ( ($x * $GLOBALS['openweathermap_feed_value']) + ($y * $GLOBALS['weatherunderground_feed_value']) + ($z * $GLOBALS['apixu_feed_value']) ) / ($GLOBALS['openweathermap_feed_value'] + $GLOBALS['weatherunderground_feed_value'] + $GLOBALS['apixu_feed_value']);
+            return $m;
+              }
       ?>
 
       <div class="column">
@@ -167,7 +194,6 @@
 
  </main>
    <h2>Current weather:</h2>
- </div>
  <div class="logos2 logos">
 
    <a class="provider" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
@@ -179,18 +205,57 @@
    <div class="singlecurrent"><?php include 'php/personalpage/weatherunderground.php'; ?></div>
    <div class="singlecurrent"><?php include 'php/personalpage/apixu.php'; ?></div>
 </div>
+<div class="current">
 
+  <div class="singlecurrent">Give a feedback to OpenWeatherMap
+    <form action="feedbacks/sendfeedbacks/openweathermap.php" method="post" >
+
+    1  <input  type="radio" name="star-o" value="1" onclick="this.form.submit()"/>
+    2  <input  type="radio" name="star-o" value="2" onclick="this.form.submit()"/>
+    3  <input  type="radio" name="star-o" value="3" onclick="this.form.submit()"/>
+    4  <input  type="radio" name="star-o" value="4" onclick="this.form.submit()"/>
+    5  <input  type="radio" name="star-o" value="5" onclick="this.form.submit()"/><br>
+
+    </form>
+  </div>
+
+  <div class="singlecurrent">Give a feedback to WeatherUnderground
+    <form action="feedbacks/sendfeedbacks/weatherunderground.php" method="post">
+
+    1  <input  type="radio" name="star-w" value="1" onclick="this.form.submit()"/>
+    2  <input  type="radio" name="star-w" value="2" onclick="this.form.submit()"/>
+    3  <input  type="radio" name="star-w" value="3" onclick="this.form.submit()"/>
+    4  <input  type="radio" name="star-w" value="4" onclick="this.form.submit()"/>
+    5  <input  type="radio" name="star-w" value="5" onclick="this.form.submit()"/><br>
+
+    </form>
+  </div>
+
+  <div class="singlecurrent">Give a feedback to <br> Apixu
+    <form action="feedbacks/sendfeedbacks/apixu.php" method="post">
+
+      1  <input  type="radio" name="star-a" value="1" onclick="this.form.submit()"/>
+      2  <input  type="radio" name="star-a" value="2" onclick="this.form.submit()"/>
+      3  <input  type="radio" name="star-a" value="3" onclick="this.form.submit()"/>
+      4  <input  type="radio" name="star-a" value="4" onclick="this.form.submit()"/>
+      5  <input  type="radio" name="star-a" value="5" onclick="this.form.submit()"/>
+
+      </form>
+
+  </div>
+
+</div>
  <footer>
    An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | Project's Repository on GitHub: <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Link</a>
  </footer>
 
 
- </body>
- 
-       <?php
-       $pageContents = ob_get_contents ();
-       ob_end_clean ();
+ <?php
+ $pageContents = ob_get_contents ();
+ ob_end_clean ();
 
-       echo str_replace ('<!--CITY-->', $city, $pageContents);
-       ?>
+ echo str_replace ('<!--CITY-->', $city, $pageContents);
+ ?>
+
+ </body>
   </html>
