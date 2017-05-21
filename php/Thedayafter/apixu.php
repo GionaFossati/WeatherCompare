@@ -12,9 +12,9 @@
 
 
       $p2_2 = explode(".", $previsioni_data2 ['forecast']['forecastday']['2']['day']['maxtemp_c']);
-      echo $p2_2[0]."° <br>";
+      echo '<div class="max">'.$p2_2[0]."° <br></div>";
       $p22_2 = explode(".", $previsioni_data2 ['forecast']['forecastday']['2']['day']['mintemp_c']);
-      echo $p22_2[0]."°";
+      echo '<div class="min">'.$p22_2[0]."° </div>";
 
   }
 

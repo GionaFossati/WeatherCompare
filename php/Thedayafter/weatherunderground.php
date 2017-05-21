@@ -12,9 +12,9 @@
 
 
     $p1_2 = $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['2']['high']['celsius']."°"."<br>";
-    echo $p1_2;
+    echo '<div class="max">'.$p1_2.'</div>';
     $p11_2 = $previsioni_data1 ['forecast']['simpleforecast']['forecastday']['2']['low']['celsius']."°";
-    echo $p11_2;
+    echo '<div class="min">'.$p11_2.'</div>';
 }
 
 ?>

@@ -13,9 +13,9 @@
 
 
       $p2_1 = explode(".", $previsioni_data2 ['forecast']['forecastday']['1']['day']['maxtemp_c']);
-      echo $p2_1[0]."° <br>";
+      echo '<div class="max">'.$p2_1[0]."° <br></div>";
       $p22_1 = explode(".", $previsioni_data2 ['forecast']['forecastday']['1']['day']['mintemp_c']);
-      echo $p22_1[0]."°";
+      echo '<div class="min">'.$p22_1[0]."° </div>";
 
   }
 

@@ -179,10 +179,10 @@
             <div class="temp media">
 
                 <?php $media_today_max = explode(".", media($p0_0[0],$p1_0,$p2_0[0]));
-                echo $media_today_max[0]."° <br>";
+                echo '<div class="max">'.$media_today_max[0]."° <br></div>";
 
                 $media_today_min = explode(".", media($p00_0[0],$p11_0,$p22_0[0]));
-                echo $media_today_min[0]."°";
+                echo '<div class="min">'.$media_today_min[0]."° </div>";
 
                 ?>
             </div>
@@ -192,10 +192,10 @@
             <div class="temp media">
 
                   <?php  $media_tomorrow_max = explode(".", media($p0_1[0],$p1_1,$p2_1[0]));
-                      echo $media_tomorrow_max[0]."° <br>";
+                      echo '<div class="max">'.$media_tomorrow_max[0]."° <br></div>";
 
                       $media_tomorrow_min = explode(".", media($p00_1[0],$p11_1,$p22_1[0]));
-                      echo $media_tomorrow_min[0]."°";
+                      echo '<div class="min">'.$media_tomorrow_min[0]."° </div>";
                   ?>
             </div>
 
@@ -203,10 +203,10 @@
 
             <div class="temp media">
                   <?php  $media_dayafter_max = explode(".", media($p0_2[0],$p1_2,$p2_2[0]));
-                        echo $media_dayafter_max[0]."° <br>";
+                        echo '<div class="max">'.$media_dayafter_max[0]."° <br></div>";
 
                         $media_dayafter_min = explode(".", media($p00_2[0],$p11_2,$p22_2[0]));
-                        echo $media_dayafter_min[0]."°";
+                        echo '<div class="min">'.$media_dayafter_min[0]."° </div>";
                   ?>
             </div>
 

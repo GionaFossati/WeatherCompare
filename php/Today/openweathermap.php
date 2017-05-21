@@ -10,9 +10,9 @@
     $previsioni_data0=json_decode($previsioni_json0,true);
 
     $p0_0 = explode(".", $previsioni_data0['list']['0']['temp']['max']);
-    echo $p0_0[0]."° <br>";
+    echo '<div class="max">'.$p0_0[0]."° <br></div>";
     $p00_0 = explode(".", $previsioni_data0['list']['0']['temp']['min']);
-    echo $p00_0[0]."°";
+    echo '<div class="min">'.$p00_0[0]."° </div>";
 
     }
 

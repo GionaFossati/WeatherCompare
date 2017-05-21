@@ -17,17 +17,17 @@
 
 
 
-    <?php //<- open a php script.
+    <?php
 
-      include('../dbconnection.php'); //<- include our connection details for database interaction.
+      include('../dbconnection.php');
       $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-     $openweathermap = $_POST['star-o']; //<- set openweathermap input to a variable.
+     $openweathermap = $_POST['star-o'];
 
-      $sql = "INSERT INTO openweathermap(openweathermap) VALUES ('$openweathermap')";//<-database structure must be right.
+      $sql = "INSERT INTO openweathermap(openweathermap) VALUES ('$openweathermap')";
 
       if(mysqli_query($conn, $sql)) { //<- if the query is accepted by the database.
-       echo '<h1>Thank you for your feedbacks!</h1>'; //<- this is the message.
+       echo '<h1>Thank you for your feedback!</h1>'; //<- this is the message.
       }
       else {
         echo '<h1>There was an error in our Database, please Try again!</h1>'; //<- if not, this is.
