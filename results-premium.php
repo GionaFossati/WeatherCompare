@@ -210,11 +210,9 @@
   <div class="singlecurrent">Give a feedback to OpenWeatherMap
     <form action="feedbacks/sendfeedbacks/openweathermap.php" method="post" >
 
-    1  <input  type="radio" name="star-o" value="1" onclick="this.form.submit()"/>
-    2  <input  type="radio" name="star-o" value="2" onclick="this.form.submit()"/>
-    3  <input  type="radio" name="star-o" value="3" onclick="this.form.submit()"/>
-    4  <input  type="radio" name="star-o" value="4" onclick="this.form.submit()"/>
-    5  <input  type="radio" name="star-o" value="5" onclick="this.form.submit()"/><br>
+    <output name="amountInput" for="star-o">0</output><br>
+    <input type="range" id="star-o" name="star-o" min="0" max="5" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+    <input type="submit" value="Send">
 
     </form>
   </div>
@@ -222,11 +220,9 @@
   <div class="singlecurrent">Give a feedback to WeatherUnderground
     <form action="feedbacks/sendfeedbacks/weatherunderground.php" method="post">
 
-    1  <input  type="radio" name="star-w" value="1" onclick="this.form.submit()"/>
-    2  <input  type="radio" name="star-w" value="2" onclick="this.form.submit()"/>
-    3  <input  type="radio" name="star-w" value="3" onclick="this.form.submit()"/>
-    4  <input  type="radio" name="star-w" value="4" onclick="this.form.submit()"/>
-    5  <input  type="radio" name="star-w" value="5" onclick="this.form.submit()"/><br>
+      <output name="amountInput" for="star-w">0</output><br>
+      <input type="range" id="star-o" name="star-w" min="0" max="5" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+      <input type="submit" value="Send">
 
     </form>
   </div>
@@ -234,11 +230,9 @@
   <div class="singlecurrent">Give a feedback to <br> Apixu
     <form action="feedbacks/sendfeedbacks/apixu.php" method="post">
 
-      1  <input  type="radio" name="star-a" value="1" onclick="this.form.submit()"/>
-      2  <input  type="radio" name="star-a" value="2" onclick="this.form.submit()"/>
-      3  <input  type="radio" name="star-a" value="3" onclick="this.form.submit()"/>
-      4  <input  type="radio" name="star-a" value="4" onclick="this.form.submit()"/>
-      5  <input  type="radio" name="star-a" value="5" onclick="this.form.submit()"/>
+      <output name="amountInput" for="star-a">0</output><br>
+      <input type="range" id="star-o" name="star-a" min="0" max="5" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+      <input type="submit" value="Send">
 
       </form>
 
