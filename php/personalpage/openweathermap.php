@@ -1,4 +1,4 @@
-<?php
+<br><?php
 
     if (isset($_POST['city'])) {
     $city = $_POST['city'];
@@ -9,15 +9,15 @@
     $previsioni_json0=file_get_contents($previsioni0);
     $previsioni_data0=json_decode($previsioni_json0,true);
 
-    echo $previsioni_data0['weather']['0']['main']."<br>";
+    echo $previsioni_data0['weather']['0']['main']."<br><br>";
     echo "Current temp:  ";
-    echo $previsioni_data0['main']['temp']."° <br>";
+    echo $previsioni_data0['main']['temp']."° <br><br>";
     echo "Wind speed:  ";
-    echo $previsioni_data0['wind']['speed']."Km/h <br>";
+    echo $previsioni_data0['wind']['speed']."Km/h <br><br>";
     echo "Pressure:  ";
-    echo $previsioni_data0['main']['pressure']."mBar<br>";
+    echo $previsioni_data0['main']['pressure']."mBar<br><br>";
     echo "Humidity:  ";
-    echo $previsioni_data0['main']['humidity']."% <br>";
+    echo $previsioni_data0['main']['humidity']."% <br><br>";
 
 
     }

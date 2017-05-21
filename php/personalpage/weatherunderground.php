@@ -11,17 +11,17 @@
     //print_r ($previsioni_data1);
 
 
-    echo $previsioni_data1 ['current_observation']['weather']."<br>";
+    echo $previsioni_data1 ['current_observation']['weather']."<br><br>";
     echo "Current temp:  ";
-    echo $previsioni_data1 ['current_observation']['temp_c']."° <br>";
+    echo $previsioni_data1 ['current_observation']['temp_c']."° <br><br>";
     echo "Feels like:  ";
-    echo $previsioni_data1 ['current_observation']['feelslike_c']."° <br>";
+    echo $previsioni_data1 ['current_observation']['feelslike_c']."° <br><br>";
     echo "Wind speed:  ";
-    echo $previsioni_data1 ['current_observation']['wind_kph']."km/h <br>";
+    echo $previsioni_data1 ['current_observation']['wind_kph']."km/h <br><br>";
     echo "Pressure:  ";
-    echo $previsioni_data1 ['current_observation']['pressure_mb']."mBar <br>";
+    echo $previsioni_data1 ['current_observation']['pressure_mb']."mBar <br><br>";
     echo "Precipitations:  ";
-    echo $previsioni_data1 ['current_observation']['precip_today_metric']."mm <br>";
+    echo $previsioni_data1 ['current_observation']['precip_today_metric']."mm <br><br>";
     echo "Humidity:  ";
     echo $previsioni_data1 ['current_observation']['relative_humidity'];
 }

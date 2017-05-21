@@ -5,6 +5,7 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/results-premium.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   </head>
 
@@ -18,12 +19,26 @@
         </form>
     </header>
 
+            <script>
+      // When the user clicks on <div>, open the popup
+          function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+          }
+            </script>
+
           <div class="logos">
 
             <a class="provider" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
             <a class="provider" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
             <a class="provider" href="https://www.apixu.com/" target="_blank">Apixu</a>
-            <div class="provider">Media Ponderata</div>
+            <div class="popup provider" onclick="myFunction()">Weighted Average
+              <span class="popuptext" id="myPopup">
+                  <h2>Weighted average:</h2><br>
+                   Based on the sum of: (weather client's rating) X (Expected temperature) <br>
+                   Divided by the sum of total client's ratings. <br>
+              </span>
+              </div>
 
           </div>
 
@@ -124,7 +139,7 @@
               $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
-              $a0 = 'SELECT avg(weatherunderground) AS average FROM weatherunderground';
+              $a0 = 'SELECT avg(openweathermap) AS average FROM openweathermap';
               $res0= $conn->query($a0);
               $row0 = $res0-> fetch_array(MYSQLI_NUM);
 
@@ -196,9 +211,9 @@
    <h2>Current weather:</h2>
  <div class="logos2 logos">
 
-   <a class="provider" href="http://openweathermap.org/find?q=<!--CITY-->" target="_blank">OpenWeatherMap </a>
-   <a class="provider" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=<!--CITY-->" target="_blank">WeatherUnderground</a>
-   <a class="provider" href="https://www.apixu.com/" target="_blank">Apixu</a> </div>
+   <div class="provider">OpenWeatherMap </div>
+   <div class="provider">WeatherUnderground</div>
+   <div class="provider">Apixu</div> </div>
  <div class="current">
 
    <div class="singlecurrent"><?php include 'php/personalpage/openweathermap.php'; ?>     </div>
@@ -207,32 +222,40 @@
 </div>
 <div class="current">
 
-  <div class="singlecurrent">Give a feedback to OpenWeatherMap
+  <div class="singlecurrent">
+    <h3>OpenWeatherMap's Rating:<h2> <?php echo $GLOBALS['openweathermap_feed_value']; ?> /10</h2></h3><br>
+
+    Give a feedback to <br> OpenWeatherMap
     <form action="feedbacks/sendfeedbacks/openweathermap.php" method="post" >
 
-    <output name="amountInput" for="star-o">0</output><br>
-    <input type="range" id="star-o" name="star-o" min="0" max="5" step="1" oninput="this.form.amountInput.value=this.value"> <br>
-    <input type="submit" value="Send">
+    <output name="amountInput" for="star-o">5</output>/10<br>
+    <input type="range" id="star-o" name="star-o" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+    <input class="submit" type="submit" value="Send">
 
     </form>
   </div>
 
-  <div class="singlecurrent">Give a feedback to WeatherUnderground
+  <div class="singlecurrent">
+    <h3 style="font-size: 26px;">WeatherUnderground's Rating:<h2> <?php echo $GLOBALS['weatherunderground_feed_value']; ?> /10</h2> </h3><br>
+
+    Give a feedback to WeatherUnderground
     <form action="feedbacks/sendfeedbacks/weatherunderground.php" method="post">
 
-      <output name="amountInput" for="star-w">0</output><br>
-      <input type="range" id="star-o" name="star-w" min="0" max="5" step="1" oninput="this.form.amountInput.value=this.value"> <br>
-      <input type="submit" value="Send">
+      <output name="amountInput" for="star-w">5</output>/10<br>
+      <input type="range" id="star-o" name="star-w" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+      <input class="submit" type="submit" value="Send">
 
     </form>
   </div>
 
-  <div class="singlecurrent">Give a feedback to <br> Apixu
+  <div class="singlecurrent">
+    <h3>Apixu's Rating:<h2> <?php echo $GLOBALS['apixu_feed_value']; ?> /10 </h2></h3><br>
+    Give a feedback to <br> Apixu
     <form action="feedbacks/sendfeedbacks/apixu.php" method="post">
 
-      <output name="amountInput" for="star-a">0</output><br>
-      <input type="range" id="star-o" name="star-a" min="0" max="5" step="1" oninput="this.form.amountInput.value=this.value"> <br>
-      <input type="submit" value="Send">
+      <output name="amountInput" for="star-a">5</output>/10<br>
+      <input type="range" id="star-o" name="star-a" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+      <input class="submit" type="submit" value="Send">
 
       </form>
 
@@ -240,7 +263,7 @@
 
 </div>
  <footer>
-   An University Project | Work in Progress | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | Project's Repository on GitHub: <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Link</a>
+   An University Project | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Project's Repository on GitHub</a>
  </footer>
 
 

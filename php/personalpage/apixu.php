@@ -11,17 +11,17 @@
 
 
 
-      echo $previsioni_data2 ['current']['condition']['text']."<br>";
+      echo $previsioni_data2 ['current']['condition']['text']."<br><br>";
       echo "Current temp:  ";
-      echo $previsioni_data2 ['current']['temp_c']."° <br>";
+      echo $previsioni_data2 ['current']['temp_c']."° <br><br>";
       echo "Feels like:  ";
-      echo $previsioni_data2 ['current']['feelslike_c']."° <br>";
+      echo $previsioni_data2 ['current']['feelslike_c']."° <br><br>";
       echo "Wind speed:  ";
-      echo $previsioni_data2 ['current']['wind_kph']."km/h <br>";
+      echo $previsioni_data2 ['current']['wind_kph']."km/h <br><br>";
       echo "Pressure:  ";
-      echo $previsioni_data2 ['current']['pressure_mb']."mBar <br>";
+      echo $previsioni_data2 ['current']['pressure_mb']."mBar <br><br>";
       echo "Precipitations:  ";
-      echo $previsioni_data2 ['current']['precip_mm']."mm <br>";
+      echo $previsioni_data2 ['current']['precip_mm']."mm <br><br>";
       echo "Humidity:  ";
       echo $previsioni_data2 ['current']['humidity']."%";
 

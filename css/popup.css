@@ -1,0 +1,38 @@
+.popup {
+   position: ;
+   display: inline-block;
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+.popup .popuptext {
+   visibility: hidden;
+   width: 50vw;
+   background-color: rgba(255, 255, 255, 0.82);
+   color: #ffb900;
+   text-align: center;
+   border-radius: 17px;
+   padding: 8px 0;
+   position: absolute;
+   left: 26vw;
+   border:  0px #ffca3d;
+   box-shadow: 3px 3px 3px #a28024;
+
+}
+
+.popup .show {
+   visibility: visible;
+   -webkit-animation: fadeIn 1s;
+   animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+   from {opacity: 0;}
+   to {opacity:1 ;}
+}
