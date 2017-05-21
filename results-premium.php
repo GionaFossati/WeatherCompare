@@ -35,7 +35,8 @@
             <div class="popup provider" onclick="myFunction()">Weighted Average
               <span class="popuptext" id="myPopup">
                   <h2>Weighted average:</h2><br>
-                   Based on the sum of: (weather client's rating) X (Expected temperature) <br>
+                   Based on the sum of: <br>
+                   (weather client's rating) X (Expected temperature) <br>
                    Divided by the sum of total client's ratings. <br>
               </span>
               </div>
@@ -73,6 +74,12 @@
 
             </div>
 
+            <?php
+            $pageContents = ob_get_contents ();
+            ob_end_clean ();
+
+            echo str_replace ('<!--CITY-->', $city, $pageContents);
+            ?>
 
             <div class="row">
 
@@ -208,71 +215,68 @@
 
 
  </main>
-   <h2>Current weather:</h2>
- <div class="logos2 logos">
+         <h2>Current weather:</h2>
+       <div class="logos2 logos">
 
-   <div class="provider">OpenWeatherMap </div>
-   <div class="provider">WeatherUnderground</div>
-   <div class="provider">Apixu</div> </div>
- <div class="current">
+         <div class="provider">OpenWeatherMap </div>
+         <div class="provider">WeatherUnderground</div>
+         <div class="provider">Apixu</div> </div>
+       <div class="current">
 
-   <div class="singlecurrent"><?php include 'php/personalpage/openweathermap.php'; ?>     </div>
-   <div class="singlecurrent"><?php include 'php/personalpage/weatherunderground.php'; ?></div>
-   <div class="singlecurrent"><?php include 'php/personalpage/apixu.php'; ?></div>
-</div>
-<div class="current">
+         <div class="singlecurrent"><?php include 'php/personalpage/openweathermap.php'; ?>     </div>
+         <div class="singlecurrent"><?php include 'php/personalpage/weatherunderground.php'; ?></div>
+         <div class="singlecurrent"><?php include 'php/personalpage/apixu.php'; ?></div>
+      </div>
 
-  <div class="singlecurrent">
-    <h3>OpenWeatherMap's Rating:<h2> <?php echo $GLOBALS['openweathermap_feed_value']; ?> /10</h2></h3><br>
 
-    Give a feedback to <br> OpenWeatherMap
-    <form action="feedbacks/sendfeedbacks/openweathermap.php" method="post" >
+          <h2>Ratings:</h2>
+          <div class="current">
 
-    <output name="amountInput" for="star-o">5</output>/10<br>
-    <input type="range" id="star-o" name="star-o" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
-    <input class="submit" type="submit" value="Send">
+            <div class="singlecurrent">
+              <h3>OpenWeatherMap's Rating:<h2> <?php echo $GLOBALS['openweathermap_feed_value']; ?> /10</h2></h3><br>
 
-    </form>
-  </div>
+              Give a feedback to <br> OpenWeatherMap
+              <form action="feedbacks/sendfeedbacks/openweathermap.php" method="post" >
 
-  <div class="singlecurrent">
-    <h3 style="font-size: 26px;">WeatherUnderground's Rating:<h2> <?php echo $GLOBALS['weatherunderground_feed_value']; ?> /10</h2> </h3><br>
+              <output name="amountInput" for="star-o">5</output>/ 10<br>
+              <input type="range" id="star-o" name="star-o" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+              <input class="submit" type="submit" value="Send">
 
-    Give a feedback to WeatherUnderground
-    <form action="feedbacks/sendfeedbacks/weatherunderground.php" method="post">
+              </form>
+            </div>
 
-      <output name="amountInput" for="star-w">5</output>/10<br>
-      <input type="range" id="star-o" name="star-w" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
-      <input class="submit" type="submit" value="Send">
+            <div class="singlecurrent">
+              <h3 style="font-size: 26px;">WeatherUnderground's Rating:<h2> <?php echo $GLOBALS['weatherunderground_feed_value']; ?> /10</h2> </h3><br>
 
-    </form>
-  </div>
+              Give a feedback to WeatherUnderground
+              <form action="feedbacks/sendfeedbacks/weatherunderground.php" method="post">
 
-  <div class="singlecurrent">
-    <h3>Apixu's Rating:<h2> <?php echo $GLOBALS['apixu_feed_value']; ?> /10 </h2></h3><br>
-    Give a feedback to <br> Apixu
-    <form action="feedbacks/sendfeedbacks/apixu.php" method="post">
+                <output name="amountInput" for="star-w">5</output>/ 10<br>
+                <input type="range" id="star-o" name="star-w" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+                <input class="submit" type="submit" value="Send">
 
-      <output name="amountInput" for="star-a">5</output>/10<br>
-      <input type="range" id="star-o" name="star-a" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
-      <input class="submit" type="submit" value="Send">
+              </form>
+            </div>
 
-      </form>
+            <div class="singlecurrent">
+              <h3>Apixu's Rating:<h2> <?php echo $GLOBALS['apixu_feed_value']; ?> /10 </h2></h3><br>
+              Give a feedback to <br> Apixu
+              <form action="feedbacks/sendfeedbacks/apixu.php" method="post">
 
-  </div>
+                <output name="amountInput" for="star-a">5</output>/ 10<br>
+                <input type="range" id="star-o" name="star-a" min="0" max="10" step="1" oninput="this.form.amountInput.value=this.value"> <br>
+                <input class="submit" type="submit" value="Send">
 
-</div>
+                </form>
+
+            </div>
+
+          </div>
+
  <footer>
    An University Project | Author: <a href="https://gionafossati.github.io/" target="_blank">Giona Fossati</a> | <a href="https://github.com/GionaFossati/WeatherCompare" target="_blank">Project's Repository on GitHub</a>
  </footer>
 
-
- <?php
- $pageContents = ob_get_contents ();
- ob_end_clean ();
-
- echo str_replace ('<!--CITY-->', $city, $pageContents);
- ?>
 
  </body>
   </html>

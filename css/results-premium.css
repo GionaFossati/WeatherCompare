@@ -4,8 +4,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #ffca3d;
-  color: #ffb900;
+  background-color: #ffb900;
+  color: #cea300;
   text-align: center;
 }
 
@@ -20,6 +20,7 @@ header {
 a:link { color: black;}
 a:visited{ color: black;}
 a:hover {color: white;}
+.popup:hover {background-color: black; color: #ffb900; border-radius: 15px; }
 
 main  {   display: flex;   }
 
@@ -27,6 +28,7 @@ main  {   display: flex;   }
   font-size: 50px;
   padding-top: 25px;
   margin-bottom: 0px;
+  color: #ffb900;
 }
 
 .input-city {
@@ -57,16 +59,7 @@ main  {   display: flex;   }
 
 .provider { width: 33.333%; color: black;}
 
-.media {
-  margin-left: 80%;
-}
-
-/*.openweathermap_logo {
-  height: 150px;
-  width: 150px;
-  background-image: url("../images/openweathermap_logo.png");
-
-}*/
+.media {  margin-left: 80%; }
 
 .forecast {
   width: 80%;
@@ -172,5 +165,5 @@ footer {
   background-color: rgba(255, 255, 255, 0.00);
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a28024;
-  color: #ffb900;
+  color: #cea300;
 }
