@@ -17,25 +17,18 @@
 
 
           <?php
-          require('../dbconnection.php'); //<- include our connection details for database interaction.
+          require('../dbconnection.php');
           $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-          $apixu = $_POST['star-a']; //<- set textbox to variable.
-          $sql = "INSERT INTO apixu (apixu) VALUES ('$apixu')";//<-database structure must be right.
+          $apixu = $_POST['star-a'];
+          $sql = "INSERT INTO apixu (apixu) VALUES ('$apixu')";
 
-          if(mysqli_query($conn, $sql)) { //<- if the query is accepted by the database.
-            echo '<h1>Thank you for your feedback!</h1>'; //<- this is the message.
+          if(mysqli_query($conn, $sql)) {
+            echo '<h1>Thank you for your feedback!</h1>';
           }
           else {
-            echo 'There was an error in our Database, please Try again!'; //<- if not, this is.
+            echo 'There was an error in our Database, please Try again!';
           }
-
-
-          $a2 = 'SELECT avg(apixu) AS average FROM apixu';
-          $res2= $conn->query($a2);
-          $row2 = $res2-> fetch_array(MYSQLI_NUM);
-
-          $apixu_feed_value = substr($row2[0], 0, -3);
 
 
           mysqli_close($conn);
