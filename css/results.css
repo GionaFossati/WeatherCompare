@@ -73,6 +73,9 @@ input:hover {
   margin-right: 20px;
    }
 
+   .max {  color: red;   }
+   .min {  color: blue;  }
+
 .row {
   color: #68b4ef;
   padding-top: 5px;

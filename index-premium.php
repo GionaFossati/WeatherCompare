@@ -14,7 +14,7 @@
     <header>
 
     <div class="title">Weather Compare PREMIUM</div><hr>
-    <h2>Compare the weather forecast between different weather providers</h2>
+    <h2>Compare weather forecast between different weather providers</h2>
 
   </header>
 

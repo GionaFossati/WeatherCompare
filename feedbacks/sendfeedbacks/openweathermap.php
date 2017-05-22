@@ -9,7 +9,7 @@
 
   </head>
   <header>
-  <div class="title">Weather Compare</div><hr>
+  <div class="title">Weather Compare PREMIUM</div><hr>
 
 </header>
   <body>
