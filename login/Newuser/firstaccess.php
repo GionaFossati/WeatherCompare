@@ -17,7 +17,7 @@
   <header>
     <div class="title">Weather Compare</div>
     <hr>
-    <h2>You register was succesfull!</h2>
+    <h1>You register was succesfull!</h1>
   </header>
   <main>
 

@@ -25,9 +25,9 @@
       $sql = "INSERT INTO weatherunderground(weatherunderground) VALUES ('$weatherunderground')";
 
     if(mysqli_query($conn, $sql)) {
-     echo '<h1>Thank you for your feedback!</h1>';
+     echo '<h1>Thank you for your feedback!</h1>'; }
     else {
-      echo '<h1>There was an error in our Database, please Try again!</h1>'; 
+      echo '<h1>There was an error in our Database, please Try again!</h1>';
     }
 
 
