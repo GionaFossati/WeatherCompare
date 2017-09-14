@@ -1,4 +1,4 @@
-<br><?php
+<?php
 
     if (isset($_POST['city'])) {
     $city = $_POST['city'];
@@ -11,11 +11,11 @@
 
     echo $previsioni_data0['weather']['0']['main']."<br><br>";
     echo "Current temp:  ";
-    echo $previsioni_data0['main']['temp']."° <br><br>";
+    echo $previsioni_data0['main']['temp']."° <br><br>N/A<br><br>";
     echo "Wind speed:  ";
     echo $previsioni_data0['wind']['speed']."Km/h <br><br>";
     echo "Pressure:  ";
-    echo $previsioni_data0['main']['pressure']."mBar<br><br>";
+    echo $previsioni_data0['main']['pressure']."mBar<br><br>N/A<br><br>";
     echo "Humidity:  ";
     echo $previsioni_data0['main']['humidity']."% <br><br>";
 
